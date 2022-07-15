@@ -10,8 +10,8 @@ function solveEquation(a, b, c) {
   let d = Math.pow(b, 2) - 4 * a * c;
   
   if (d > 0) {
-    arr[0] = parseInt((( -b + Math.sqrt(d)) / (2 * a)).toFixed(0));
-    arr[1] = parseInt((( -b - Math.sqrt(d) / (2 * a)).toFixed(0));
+    arr[0] = (( -b + Math.sqrt(d)) / (2 * a));
+    arr[1] = (( -b - Math.sqrt(d)) / (2 * a));
   }
   else if (d === 0) {
     arr[0] = -b / (2 * a);
@@ -21,20 +21,7 @@ function solveEquation(a, b, c) {
 }
 
 function calculateTotalMortgage(percent, contribution, amount, date) {
-  let totalAmount = 0;
-  let loanRate = parseInt(percent) / 100;
-  let firstPayment = parseInt(contribution);
-  let loanAmount = parseInt(amount);
   
-  if (Number.isNaN(loanRate)) {
-    return totalAmount = `Параметр "Процентная ставка" содержит неправильное значение "${percent}"`;
-  }
-  else if (Number.isNaN(firstPayment)) {
-    return totalAmount = `Параметр "Начальный взнос" содержит неправильное значение "${contribution}"`;
-  } 
-  else if (Number.isNaN(loanAmount)) {
-    return totalAmount = `Параметр "Сумма кредита" содержит неправильное значение "${amount}"`; 
-  }
 
   
   // код для задачи №2 писать здесь
